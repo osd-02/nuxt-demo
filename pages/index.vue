@@ -1,73 +1,11 @@
 <template>
   <layout-wrapper>
-    <layout-header />
-    <div
-      class="
-        relative
-        pt-16
-        pb-32
-        flex
-        content-center
-        items-center
-        justify-center
-        z-10
-      "
-      style="min-height: 75vh"
-    >
-      <div class="absolute top-0 w-full h-full bg-center bg-cover visual-home">
-        <span
-          id="blackOverlay"
-          class="w-full h-full absolute opacity-75"
-        ></span>
-      </div>
-      <div class="container relative mx-auto">
-        <div class="items-center flex flex-wrap">
-          <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-            <div>
-              <h1 class="text-white font-semibold text-5xl text-shadow">
-                NUXT SMAPLE SITE DEMO
-              </h1>
-              <base-heading></base-heading>
-              <p class="mt-4 text-lg text-white text-shadow-md">
-                お知らせやメニューをmicroCMSを導入したDEMOサイトになります。
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="
-          top-auto
-          bottom-0
-          left-0
-          right-0
-          w-full
-          absolute
-          pointer-events-none
-          overflow-hidden
-        "
-        style="height: 70px; transform: translateZ(0px)"
-      >
-        <svg
-          class="absolute bottom-0 overflow-hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          version="1.1"
-          viewBox="0 0 2560 100"
-          x="0"
-          y="0"
-        >
-          <polygon
-            class="text-white fill-current"
-            points="2560 0 2560 100 0 100"
-          ></polygon>
-        </svg>
-      </div>
-    </div>
+    <layout-visual
+      title="NUTX SAMPLE SITE DEMO"
+      message="お知らせやメニューをmicroCMSで表示"
+    />
     <div class="w-full md:max-w-3xl mx-auto pt-20 px-6 md:px-0">
-      <h2 class="font-sans text-lg text-gray-800 text-center text-3xl mb-10">
-        MdN Cafeのおすすめメニュー
-      </h2>
+      <base-heading>Mdn cafe おすすめメニュー</base-heading>
       <div class="flex flex-wrap justify-between mb-20 md:mb-0">
         <div class="md:w-56 mb-20 shadow-lg bg-gray-200">
           <div class="max-w">
@@ -202,7 +140,6 @@
         </a>
       </div>
     </div>
-    <layout-footer />
   </layout-wrapper>
 </template>
 
