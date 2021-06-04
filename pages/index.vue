@@ -1,6 +1,5 @@
 <template>
   <layout-wrapper>
-    <layout-header />
     <div
       class="
         relative
@@ -202,7 +201,6 @@
         </a>
       </div>
     </div>
-    <layout-footer />
   </layout-wrapper>
 </template>
 
