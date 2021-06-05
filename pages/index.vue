@@ -1,7 +1,7 @@
 <template>
   <layout-wrapper>
     <layout-visual
-      title="NUTX SAMPLE SITE DEMO"
+      title="NUXT SAMPLE SITE DEMO"
       message="お知らせやメニューをmicroCMSで表示"
     />
     <div class="w-full md:max-w-3xl mx-auto pt-20 px-6 md:px-0">
@@ -35,30 +35,7 @@
           </div>
         </div>
       </div>
-      <div class="mb-10 mx-auto text-center">
-        <a
-          href="/menu/"
-          class="
-            font-semibold
-            md:text-lg
-            xl:text-base
-            px-4
-            md:px-5
-            xl:px-4
-            py-3
-            md:py-4
-            xl:py-3
-            leading-tight
-            shadow-md
-            rounded-lg
-            bg-white
-            hover:bg-gray-200
-            text-gray-800
-          "
-        >
-          メニューの一覧
-        </a>
-      </div>
+      <base-button name="メニューの一覧" link="/menu/" />
       <h2 class="font-sans text-lg text-gray-800 text-center text-3xl mb-10">
         MdN Cafeのお知らせ
       </h2>
@@ -115,30 +92,7 @@
           </a>
         </div>
       </div>
-      <div class="mb-10 mx-auto text-center">
-        <a
-          href="/information/"
-          class="
-            font-semibold
-            md:text-lg
-            xl:text-base
-            px-4
-            md:px-5
-            xl:px-4
-            py-3
-            md:py-4
-            xl:py-3
-            leading-tight
-            shadow-md
-            rounded-lg
-            bg-white
-            hover:bg-gray-200
-            text-gray-800
-          "
-        >
-          お知らせの一覧
-        </a>
-      </div>
+      <base-button name="お知らせの一覧" link="/information" />
     </div>
   </layout-wrapper>
 </template>
