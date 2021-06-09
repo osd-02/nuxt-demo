@@ -6,6 +6,7 @@
         <layout-menu-list
           v-for="(item, index) in items"
           :key="index"
+          :image="item.image"
           :name="item.name"
           :body="item.body"
           :price="item.price"

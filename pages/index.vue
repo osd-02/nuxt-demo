@@ -6,35 +6,14 @@
     />
     <div class="w-full md:max-w-3xl mx-auto pt-20 px-6 md:px-0">
       <base-heading>Mdn cafe おすすめメニュー</base-heading>
-      <div class="flex flex-wrap justify-between mb-20 md:mb-0">
-        <div class="md:w-56 mb-20 shadow-lg bg-gray-200">
-          <div class="max-w">
-            <img src="~/assets/img/menu01.jpg" alt="商品名" class="w-full" />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">アメリカンコーヒー</div>
-              <p class="text-gray-700 text-base mb-4">480円（税込）</p>
-            </div>
-          </div>
-        </div>
-        <div class="md:w-56 mb-20 shadow-lg bg-gray-200">
-          <div class="max-w">
-            <img src="~/assets/img/menu01.jpg" alt="商品名" class="w-full" />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">アメリカンコーヒー</div>
-              <p class="text-gray-700 text-base mb-4">480円（税込）</p>
-            </div>
-          </div>
-        </div>
-        <div class="md:w-56 mb-20 shadow-lg bg-gray-200">
-          <div class="max-w">
-            <img src="~/assets/img/menu01.jpg" alt="商品名" class="w-full" />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">アメリカンコーヒー</div>
-              <p class="text-gray-700 text-base mb-4">480円（税込）</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <layout-menu-list
+        v-for="(item, index) in items"
+        :key="index"
+        :image="item.image"
+        :name="item.name"
+        :body="item.body"
+        :price="item.price"
+      />
       <base-button name="メニューの一覧" link="/menu/" />
       <h2 class="font-sans text-lg text-gray-800 text-center text-3xl mb-10">
         MdN Cafeのお知らせ
@@ -97,7 +76,20 @@
   </layout-wrapper>
 </template>
 
-<script></script>
+<script>
+import axios from 'axios'
+
+export default {
+  async asyncData({ $config }) {
+    const { data } = await axios.get(`${$config.apiUrl}/menu`, {
+      headers: { 'X-API-KEY': $config.apiKey },
+    })
+    return {
+      items: data.contents,
+    }
+  },
+}
+</script>
 
 <style>
 .visual-home {
