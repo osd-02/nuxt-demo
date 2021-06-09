@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <layout-wrapper>
     <layout-visual title="Shop" :height="40" visual="visual-shop" />
     <div class="w-full md:max-w-3xl mx-auto pt-20 px-6 md:px-0">
       <table class="table-auto w-full mb-10">
@@ -44,7 +44,7 @@
         >
       </div>
     </div>
-  </div>
+  </layout-wrapper>
 </template>
 
 <script>
