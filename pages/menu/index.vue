@@ -6,7 +6,6 @@
         <layout-menu-list
           v-for="(item, index) in items"
           :key="index"
-          :image="item.image"
           :name="item.name"
           :body="item.body"
           :price="item.price"
@@ -19,7 +18,6 @@
 
 <script>
 import axios from 'axios'
-
 export default {
   async asyncData({ $config }) {
     const { data } = await axios.get(`${$config.apiUrl}/menu`, {

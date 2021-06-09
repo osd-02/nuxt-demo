@@ -42,6 +42,26 @@ export default {
       type: Boolean,
       default: true,
     },
+    image: {
+      type: Object,
+      required: false,
+    },
+    imageUrl: {
+      type: String,
+      required: false,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    body: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
   },
 }
 </script>
