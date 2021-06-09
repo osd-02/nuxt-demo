@@ -9,11 +9,11 @@
       mb-5
     "
   >
-    <a href="/information/detail" class="block px-4 py-3">
+    <a :href="`/information/` + id + `/`" class="block px-4 py-3">
       <time class="text-gray-700 text-base mb-1 block md:w-1/6">
-        2020.08.15
+        {{ date | formatDate }}
       </time>
-      <div class="md:w-10/12">{{ itemTitle }}</div>
+      <div class="md:w-10/12">{{ title }}</div>
     </a>
   </div>
 </template>
@@ -26,6 +26,18 @@ export default Vue.extend({
     itemTitle: {
       type: String,
       default: 'お知らせ',
+    },
+    id: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    date: {
+      type: String,
+      required: true,
     },
   },
 })
